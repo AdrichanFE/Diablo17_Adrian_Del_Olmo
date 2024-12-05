@@ -7,6 +7,7 @@ public class NPC : MonoBehaviour
 {
     private Outline outline;
 
+    [SerializeField] private DialogaSO dialogo;
     [SerializeField] private Texture2D cursorNPC;
     [SerializeField] private Texture2D cursorPorDefecto;
     [SerializeField] private float tiempoRotacion;
@@ -20,9 +21,10 @@ public class NPC : MonoBehaviour
     
     public void Interactuar(Transform interactuador)
     {
-        transform.DOLookAt(interactuador.position, tiempoRotacion, AxisConstraint.Y);
-        Debug.Log("Hola, caranalga");
+        transform.DOLookAt(interactuador.position, tiempoRotacion, AxisConstraint.Y).OnComplete(()=> DialogoManager.dialogo.IniciarDialogo(dialogo));//Cuando se complete la accion del tween con la expresion lambda realiza lo que queremos hacer.
     }
+
+
 
     private void OnMouseEnter()
     {
