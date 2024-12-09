@@ -16,4 +16,4 @@ MonoBehaviour:
   - "\xBFHola guapo, que te trae a esta oscura y fria mazmorra?"
   - "\xBFNecesitas algo de este viejo goblin?"
   - Conozco bien estas antiguas salas.
-  tiempoEntreLetras: 0.3
+  tiempoEntreLetras: 0.05
