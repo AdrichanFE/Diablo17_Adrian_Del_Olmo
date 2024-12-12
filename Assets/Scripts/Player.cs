@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine.AI;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float distanciaInteraccion;
+    [SerializeField] private float tiempoRotacion;
     private NavMeshAgent agent;
     private Camera cam;
 
@@ -33,8 +35,9 @@ public class Player : MonoBehaviour
             //Comprobar si ha llegado al NPC
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
             {
-                npc.Interactuar(this.transform);
-                ultimoClick = null;  
+                LanzarInteraccion(npc);
+                
+
             }
         }
         else if (ultimoClick)
@@ -42,6 +45,11 @@ public class Player : MonoBehaviour
             agent.stoppingDistance = 0f;
         }
         
+    }
+    private void LanzarInteraccion(NPC npc)
+    {
+        npc.Interactuar(this.transform);
+        ultimoClick = null;
     }
 
     void Movimiento()

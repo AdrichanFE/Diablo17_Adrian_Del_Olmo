@@ -11,6 +11,7 @@ public class NPC : MonoBehaviour
     [SerializeField] private Texture2D cursorNPC;
     [SerializeField] private Texture2D cursorPorDefecto;
     [SerializeField] private float tiempoRotacion;
+    [SerializeField] private Transform cameraPoint;
 
     //Este o no este el script habilitado, el awake se lanza, el start no.
     private void Awake()
@@ -21,7 +22,8 @@ public class NPC : MonoBehaviour
     
     public void Interactuar(Transform interactuador)
     {
-        transform.DOLookAt(interactuador.position, tiempoRotacion, AxisConstraint.Y).OnComplete(()=> DialogoManager.dialogo.IniciarDialogo(dialogo));//Cuando se complete la accion del tween con la expresion lambda realiza lo que queremos hacer.
+        transform.DOLookAt(interactuador.position, tiempoRotacion, AxisConstraint.Y).OnComplete(()=> DialogoManager.dialogo.IniciarDialogo(dialogo,cameraPoint));//Cuando se complete la accion del tween con la expresion lambda realiza lo que queremos hacer.
+
     }
 
 
