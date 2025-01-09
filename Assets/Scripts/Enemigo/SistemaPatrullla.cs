@@ -9,6 +9,7 @@ public class SistemaPatrullla : MonoBehaviour
     [SerializeField] private Transform ruta;
     private int indiceRutaActual=-1;//Marca el indice del nuevo punto al cual dirigirse y hay que inicializarlo a -1 para que empiece en el cero
     [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private float velocidadPatrulla;
     private Vector3 destinoActual;//Marca el destino al cual tenemos que ir
 
     List<Vector3> listadoPuntos = new List<Vector3>();
@@ -23,11 +24,21 @@ public class SistemaPatrullla : MonoBehaviour
             listadoPuntos.Add(punto.position);
         }
     }
+
+    private void OnEnable()
+    {
+        //Reiniciamos la ruta
+        indiceRutaActual = -1;
+        //Volvemos a la velocidad de patrulla
+        agent.speed = velocidadPatrulla;
+        //Y volvemos a activar las corrutinas
+        StartCoroutine(PatrullaryEsperar());
+    }
     // Start is called before the first frame update
     void Start()
     {
         
-        StartCoroutine(PatrullaryEsperar());
+        
     }
 
     private IEnumerator PatrullaryEsperar()
