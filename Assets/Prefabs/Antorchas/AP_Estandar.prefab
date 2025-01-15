@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1558363349473016508}
   - component: {fileID: 1768563180292933692}
   m_Layer: 0
-  m_Name: AntorchaPared
+  m_Name: AP_Estandar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +150,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.7447298, b: 0.5330188, a: 1}
+  m_Color: {r: 1, g: 0.8402179, b: 0.5707547, a: 1}
   m_Intensity: 3
   m_Range: 40
   m_SpotAngle: 30
@@ -194,7 +194,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 3171
+  m_ColorTemperature: 3955
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0

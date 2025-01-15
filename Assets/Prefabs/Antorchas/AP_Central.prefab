@@ -44,8 +44,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.7447298, b: 0.5330188, a: 1}
-  m_Intensity: 3
+  m_Color: {r: 0.185097, g: 0.8349056, b: 0.22694139, a: 1}
+  m_Intensity: 4
   m_Range: 40
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -88,7 +88,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 3171
+  m_ColorTemperature: 3517
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 8856068853996573114}
   - component: {fileID: 6671347855779631852}
   m_Layer: 0
-  m_Name: AntorchaParedNueva
+  m_Name: AP_Central
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
