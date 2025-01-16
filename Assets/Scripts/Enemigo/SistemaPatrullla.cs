@@ -10,6 +10,7 @@ public class SistemaPatrullla : MonoBehaviour
     private int indiceRutaActual=-1;//Marca el indice del nuevo punto al cual dirigirse y hay que inicializarlo a -1 para que empiece en el cero
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private float velocidadPatrulla;
+    [SerializeField] private float stoppingDistancePatrulla;
     private Vector3 destinoActual;//Marca el destino al cual tenemos que ir
 
     List<Vector3> listadoPuntos = new List<Vector3>();
@@ -31,6 +32,7 @@ public class SistemaPatrullla : MonoBehaviour
         indiceRutaActual = -1;
         //Volvemos a la velocidad de patrulla
         agent.speed = velocidadPatrulla;
+        agent.stoppingDistance = stoppingDistancePatrulla;
         //Y volvemos a activar las corrutinas
         StartCoroutine(PatrullaryEsperar());
     }

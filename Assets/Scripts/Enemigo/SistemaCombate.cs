@@ -11,6 +11,7 @@ public class SistemaCombate : MonoBehaviour
     [SerializeField] private float distanciaAtaque;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator anim;
+    [SerializeField] private float dannoAtaque;
     
 
 
@@ -48,7 +49,7 @@ public class SistemaCombate : MonoBehaviour
             EnfocarObjetivo();
             //Para perseguir al personaje en todo momento(calculando su posicion)
             agent.SetDestination(main.MainTarget.position);
-            if (agent.remainingDistance <= distanciaAtaque)
+            if (!agent.pathPending && agent.remainingDistance <= distanciaAtaque)
             {
                 anim.SetBool("Attack", true);
             }
@@ -68,4 +69,16 @@ public class SistemaCombate : MonoBehaviour
         Quaternion rotacionATarget = Quaternion.LookRotation(direccionATarget);
         transform.rotation = rotacionATarget;
     }
+
+    #region Ejecutados por eventos de animacion.
+    private void Atacar()
+    {
+        main.MainTarget.GetComponent<Player>().HacerDanno(dannoAtaque);
+    }
+
+    private void FinAnimacionAtaque()
+    {
+        anim.SetBool("Attack", false);
+    }
+    #endregion
 }

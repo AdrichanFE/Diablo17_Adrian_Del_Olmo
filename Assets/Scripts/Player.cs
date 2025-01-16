@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,13 +30,13 @@ public class Player : MonoBehaviour
             Movimiento();
         }
         
-        if (ultimoClick&& ultimoClick.TryGetComponent(out NPC npc))
+        if (ultimoClick&& ultimoClick.TryGetComponent(out IInteractuable interactuable))
         {
             agent.stoppingDistance = distanciaInteraccion;
             //Comprobar si ha llegado al NPC
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
             {
-                LanzarInteraccion(npc);
+                LanzarInteraccion(interactuable);
                 
 
             }
@@ -46,9 +47,9 @@ public class Player : MonoBehaviour
         }
         
     }
-    private void LanzarInteraccion(NPC npc)
+    private void LanzarInteraccion(IInteractuable interactuable)
     {
-        npc.Interactuar(this.transform);
+        interactuable.Interactuar(transform);
         ultimoClick = null;
     }
 
@@ -63,5 +64,10 @@ public class Player : MonoBehaviour
                 ultimoClick = hit.transform;
             }
         }
+    }
+
+    public void HacerDanno(float dannoAtaque)
+    {
+        Debug.Log("Me hacen pupita"+dannoAtaque);
     }
 }
