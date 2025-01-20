@@ -1,0 +1,22 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CamaraMiniMapa : MonoBehaviour
+{
+    [SerializeField] private Player player;
+
+    private Vector3 distanciaPlayer;
+    // Start is called before the first frame update
+    void Start()
+    {
+        distanciaPlayer= transform.position-player.transform.position;
+    }
+
+    // Update is called once per frame
+    void LateUpdate()
+    {
+        //Mi posicion en todos los frames es la del player Más cierta distancia
+       transform.position= player.transform.position+distanciaPlayer;
+    }
+}

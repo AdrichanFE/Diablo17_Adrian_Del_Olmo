@@ -2,17 +2,22 @@ using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] private float distanciaInteraccion;
+    [SerializeField] private float distanciaAtaque;
     [SerializeField] private float tiempoRotacion;
     private NavMeshAgent agent;
     private Camera cam;
+    private PlayerAnimations playerAnimation;
 
     private Transform ultimoClick;//Guardo la informacion del NPC actual con el que voy a hablar
+
+    public PlayerAnimations PlayerAnimation { get => playerAnimation; set => playerAnimation = value; }
 
 
     // Start is called before the first frame update
@@ -41,12 +46,17 @@ public class Player : MonoBehaviour
 
             }
         }
+        else if (ultimoClick && ultimoClick.TryGetComponent(out Enemigo enemigo))
+        {
+            
+        }
         else if (ultimoClick)
         {
             agent.stoppingDistance = 0f;
         }
-        
+
     }
+    
     private void LanzarInteraccion(IInteractuable interactuable)
     {
         interactuable.Interactuar(transform);
