@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: PC_Nightmare_Mushroom
-    second: {fileID: 2100000, guid: 4561c7e30cba7834d8bfb8abb2c66bf4, type: 2}
+    second: {fileID: 2100000, guid: 26ad603e370b321458954bc55aa89884, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -9,6 +9,7 @@ public class DialogoManager : MonoBehaviour
     [SerializeField] private GameObject marcos;
     [SerializeField] private TMP_Text textoDialogo;
     [SerializeField] private Transform npcCamera;
+    [SerializeField] private EventManagerSO eventManager;
 
     private bool escribiendo;//Determina si el sistema esta escribiendo o no
     private int indiceFraseActual;//Marca la frase por la que voy
@@ -90,11 +91,16 @@ public class DialogoManager : MonoBehaviour
 
     private void FinalizarDialogo()
     {
+        Time.timeScale = 1f;//Se termina la pausa.
         marcos.SetActive(false);
         StopAllCoroutines();
         indiceFraseActual = 0;//Para posteriores dialogos.
         escribiendo = false;
+        if (dialogoActual.tieneMision)
+        {
+            eventManager.NuevaMision();
+        }
+
         dialogoActual = null;//Ya no tenemos ningun dialogo.
-        Time.timeScale = 1f;//Se termina la pausa.
     }
 }

@@ -16,4 +16,7 @@ MonoBehaviour:
   - "\xBFHola guapo, que te trae a esta oscura y fria mazmorra?"
   - "\xBFNecesitas algo de este viejo goblin?"
   - Conozco bien estas antiguas salas.
+  - Si me traes 3 setas de la muerte te regalare un mapa de la mazmorra
   tiempoEntreLetras: 0.05
+  tieneMision: 0
+  textoMision: Consigue setas de la muerte (0/3)
