@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f5a3d0142ce4d0479b4257f40b57fca, type: 3}
-  m_Name: Dialogo1
+  m_Name: Dialogo0
   m_EditorClassIdentifier: 
   frases:
   - "\xBFHola guapo, que te trae a esta oscura y fria mazmorra?"
@@ -19,4 +19,4 @@ MonoBehaviour:
   - Si me traes 3 setas de la muerte te regalare un mapa de la mazmorra
   tiempoEntreLetras: 0.05
   tieneMision: 1
-  textoMision: Consigue setas de la muerte (0/3)
+  mision: {fileID: 11400000, guid: 2fd251a064fbf7d40854e8faa6371d99, type: 2}
