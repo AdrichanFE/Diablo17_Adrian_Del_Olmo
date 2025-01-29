@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5a3d0142ce4d0479b4257f40b57fca, type: 3}
+  m_Name: Dialogo1
+  m_EditorClassIdentifier: 
+  frases:
+  - "\xBFHola guapo, que te trae a esta oscura y fria mazmorra?"
+  - "\xBFNecesitas algo de este viejo goblin?"
+  - Conozco bien estas antiguas salas.
+  - Si me traes 3 setas de la muerte te regalare un mapa de la mazmorra
+  tiempoEntreLetras: 0.05
+  tieneMision: 1
+  mision: {fileID: 11400000, guid: 2fd251a064fbf7d40854e8faa6371d99, type: 2}
