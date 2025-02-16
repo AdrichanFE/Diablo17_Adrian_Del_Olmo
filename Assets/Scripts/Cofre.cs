@@ -5,13 +5,20 @@ using UnityEngine;
 public class Cofre : MonoBehaviour,IInteractuable
 {
     private Outline outline;
-
+    [SerializeField] private EventManagerSO eventManager;
     [SerializeField] private Texture2D cursorCofre;
     [SerializeField] private Texture2D cursorPorDefecto;
+    [SerializeField] private MisionSO misionAsociada;
+
+    private bool estaSiendoInteractuado = false;
 
     public void Interactuar(Transform interactuador)
     {
-        
+        if (estaSiendoInteractuado)
+            return;
+        estaSiendoInteractuado = true;
+        eventManager.TerminarMision(misionAsociada);
+        Destroy(gameObject, 3);
     }
 
 

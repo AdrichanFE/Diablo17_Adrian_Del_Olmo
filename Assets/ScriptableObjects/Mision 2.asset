@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e77d422ef1df7d2408673697bed8a80d, type: 3}
-  m_Name: Mision 1
+  m_Name: Mision 2
   m_EditorClassIdentifier: 
-  ordenInicial: Encuentra el cofre
-  ordenFinal: Genial, un poco de oro siempre viene bien
+  ordenInicial: Sal de la mazmorra
+  ordenFinal: Por fin vuelves a ver la luz del sol. Enhorabuena.
   repetir: 0
   repeticionesTotales: 1
   indiceMision: 1

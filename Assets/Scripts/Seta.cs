@@ -6,6 +6,8 @@ public class Seta : MonoBehaviour,IInteractuable
 {
     private Outline outline;
     [SerializeField] private EventManagerSO eventManager;
+    [SerializeField] private Texture2D cursorPorDefecto;
+    [SerializeField] private Texture2D cursorSeta;
 
     [SerializeField] private MisionSO misionAsociada;
     public void Interactuar(Transform interactuador)
@@ -25,15 +27,18 @@ public class Seta : MonoBehaviour,IInteractuable
 
     private void Awake()
     {
+        
         outline = GetComponent<Outline>();
     }
     private void OnMouseEnter()
     {
+        Cursor.SetCursor(cursorSeta, Vector2.zero, CursorMode.Auto);
         outline.enabled = true;
     }
 
     private void OnMouseExit()
     {
+        Cursor.SetCursor(cursorPorDefecto, Vector2.zero, CursorMode.Auto);
         outline.enabled = false;
     }
 }
