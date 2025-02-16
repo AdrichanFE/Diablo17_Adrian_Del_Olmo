@@ -17,10 +17,8 @@ MonoBehaviour:
     estas salas. Je Je Je
 
 '
-  - 'Y quizas te interese saber que hay un tesoro esperando en estas salas aventurero.
-    Pero ten cuidado con los peligros que hay aqui encerrados.
-
-'
+  - Te preguntaras porque no he ido yo a buscarlas estando tan cerca verdad?
+  - "De alguna forma tenia que ense\xF1arte los controles basicos verdad?"
   tiempoEntreLetras: 0.05
   tieneMision: 1
   mision: {fileID: 11400000, guid: 2fd251a064fbf7d40854e8faa6371d99, type: 2}

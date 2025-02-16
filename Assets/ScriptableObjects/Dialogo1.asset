@@ -17,6 +17,7 @@ MonoBehaviour:
   - "\xBFNecesitas algo de este viejo goblin?"
   - Conozco bien estas antiguas salas.
   - Si me traes 3 setas de la muerte te regalare un mapa de la mazmorra
+  - Puedes encontrarlas aqui al lado aventurero
   tiempoEntreLetras: 0.05
   tieneMision: 1
   mision: {fileID: 11400000, guid: 2fd251a064fbf7d40854e8faa6371d99, type: 2}

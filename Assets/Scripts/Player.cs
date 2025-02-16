@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float distanciaInteraccion;
     [SerializeField] private float distanciaAtaque;
     [SerializeField] private float tiempoRotacion;
+    [SerializeField] private GameObject menuPausa;
     private NavMeshAgent agent;
     private Camera cam;
     private PlayerAnimations playerAnimation;
@@ -19,7 +20,23 @@ public class Player : MonoBehaviour
 
     public PlayerAnimations PlayerAnimation { get => playerAnimation; set => playerAnimation = value; }
 
+    private void FixedUpdate()//Ciclo de fisicas, es fijo. Se reproduce 0.02 segundos.
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            menuPausa.SetActive(true);
+            Time.timeScale = 0f;
+            Movimiento();
 
+        }
+        else
+        {
+            Movimiento();
+        }
+
+
+
+    }
     // Start is called before the first frame update
     void Start()
     {
